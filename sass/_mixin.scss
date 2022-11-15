@@ -1,0 +1,12 @@
+@import "variables";
+
+@mixin gradient{
+    background: $gradient;
+}
+
+@mixin flex-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 0;
+}
