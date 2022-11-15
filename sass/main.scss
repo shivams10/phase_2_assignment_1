@@ -1,0 +1,136 @@
+@import "variables";
+@import "mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $primary-color;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: $gradient;
+  color: $tertiary-color;
+  border-radius: 0 0 30px 30px;
+
+  .logo {
+    font-size: 32px;
+    font-family: cursive;
+  }
+
+  .nav-links {
+    a {
+      color: $tertiary-color;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+
+  li {
+    padding: 5px 14px;
+
+    &:hover {
+      background-color: $secondary-color;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+  }
+  .links {
+    position: relative;
+
+    .dropdown {
+      background-color: $orange;
+      padding: 1em 0;
+      position: absolute;
+      display: none;
+      border-radius: 0 0 30px 30px;
+      top: 35px;
+      right: -19px;
+
+      li {
+        padding: 0.5em;
+        width: 6em;
+        text-align: center;
+
+        &:hover {
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.links:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+//Mobile View
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background: $gradient;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 0 0 30px 30px;
+
+    li {
+      margin-top: 12px;
+
+      &:hover {
+        display: inline-block;
+        background-color: $secondary-color;
+        transition: 0.3s ease;
+      }
+    }
+
+    .dropdown {
+      top: 30px;
+      transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+}

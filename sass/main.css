@@ -1,1 +1,118 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111111;
+}
+body a {
+  text-decoration: none;
+}
+body li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(45deg, #F6B443, #cd8201);
+  color: white;
+  border-radius: 0 0 30px 30px;
+}
+.navbar .logo {
+  font-size: 32px;
+  font-family: cursive;
+}
+.navbar .nav-links a {
+  color: white;
+}
+.navbar .nav-links input[type=checkbox] {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li {
+  padding: 5px 14px;
+}
+.menu li:hover {
+  background-color: #F6B443;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+.menu .links {
+  position: relative;
+}
+.menu .links .dropdown {
+  background-color: #cd8201;
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 0 0 30px 30px;
+  top: 35px;
+  right: -19px;
+}
+.menu .links .dropdown li {
+  padding: 0.5em;
+  width: 6em;
+  text-align: center;
+}
+.menu .links .dropdown li:hover {
+  background-color: #F6B443;
+}
+
+.links:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background: linear-gradient(45deg, #F6B443, #cd8201);
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 0 0 30px 30px;
+  }
+  .menu li {
+    margin-top: 12px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #F6B443;
+    transition: 0.3s ease;
+  }
+  .menu .dropdown {
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .menu .dropdown li:hover {
+    background-color: #F6B443;
+  }
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
