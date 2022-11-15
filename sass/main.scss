@@ -94,6 +94,117 @@ body {
   user-select: none;
 }
 
+.home {
+  @include flex-row;
+  flex-wrap: wrap;
+  margin: 10vh 0px;
+  color: $tertiary-color;
+
+  .home-content {
+    flex-basis: 30%;
+    font-family: cursive;
+    font-size: 3rem;
+
+    .waviy {
+      position: relative;
+      -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+      font-size: 60px;
+
+      span {
+        color: $orange;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+    .waviy span {
+      display: inline-block;
+      text-transform: uppercase;
+      animation: waviy 1s infinite;
+      animation-delay: calc(0.1s * var(--i));
+    }
+    @keyframes waviy {
+      0%,
+      40%,
+      100% {
+        transform: translateY(0);
+      }
+      20% {
+        transform: translateY(-20px);
+      }
+    }
+  }
+
+  .home-banner {
+    flex-basis: 20%;
+    box-shadow: 10px 5px 10px 5px $tertiary-color;
+    border-radius: 0 30px 30px 0;
+
+    img {
+      width: 100%;
+      border-radius: 0 30px 30px 0;
+    }
+
+    &:hover {
+      box-shadow: 10px 5px 10px 5px $secondary-color;
+    }
+  }
+}
+
+.about {
+  @include flex-row;
+  background-image: $gradient;
+  flex-direction: column;
+  text-align: center;
+  
+  span {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 15px 0;
+  }
+
+  .flex-box {
+    span {
+      display: none;
+    }
+
+    @include flex-row;
+    flex-direction: column;
+    background-color: rgb(253, 249, 213);
+    border: 10px solid $orange;
+    border-radius: 20px;
+    padding: 1rem;
+
+    .genral-info {
+      border: 6px solid $orange;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+    .education {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 6px solid $orange;
+      padding: 1rem;
+      margin-top: 1rem;
+
+      .institute {
+        padding: 1rem;
+        border: 6px solid $orange;
+        margin: 0 5px;
+      }
+    }
+    .information {
+      font-size: 16px;
+      color: rgb(59, 58, 58);
+    }
+    .headers {
+      margin: 10px 2px;
+    }
+  }
+}
+
 //Mobile View
 
 @media (max-width: 768px) {
@@ -132,5 +243,51 @@ body {
   }
   .hamburger {
     display: block;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 0;
+
+    #space{
+        display: none;
+    }
+
+    .home-banner {
+      @include flex-row;
+
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
+
+      img {
+        width: 40%;
+      }
+    }
+  }
+
+  .about {
+    padding: 0;
+ 
+    span {
+      display: none;
+    }
+
+    .flex-box {
+      span {
+        display: flex;
+      }
+
+      .education {
+        display: flex;
+        flex-direction: column; 
+
+        .institute {
+          margin: 1rem;
+        }
+      }
+    }
   }
 }
