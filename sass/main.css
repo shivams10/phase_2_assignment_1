@@ -97,18 +97,18 @@ body li {
   font-family: cursive;
   font-size: 3rem;
 }
-.home .home-content .waviy {
+.home .home-content .animation-waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
   font-size: 60px;
 }
-.home .home-content .waviy span {
+.home .home-content .animation-waviy span {
   color: #cd8201;
 }
-.home .home-content .waviy span:hover {
+.home .home-content .animation-waviy span:hover {
   color: #F6B443;
 }
-.home .home-content .waviy span {
+.home .home-content .animation-waviy span {
   display: inline-block;
   text-transform: uppercase;
   -webkit-animation: waviy 1s infinite;
@@ -265,6 +265,18 @@ body li {
   position: relative;
 }
 
+@media (max-width: 1070px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .home .home-content {
+    margin-top: 30px;
+  }
+  .home .home-banner img {
+    width: 50%;
+  }
+}
 @media (max-width: 768px) {
   .menu {
     display: none;
@@ -298,8 +310,6 @@ body li {
     display: block;
   }
   .home {
-    flex-direction: column-reverse;
-    text-align: center;
     margin: 0;
   }
   .home #space {
