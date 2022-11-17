@@ -8,7 +8,7 @@
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: $primary-color;
+  background-color: #e0f2f3;
 
   a {
     text-decoration: none;
@@ -23,10 +23,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 30px;
   background: $gradient;
-  color: $tertiary-color;
   border-radius: 0 0 30px 30px;
+  color: $primary-color;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
 
   .logo {
     font-size: 32px;
@@ -35,7 +38,7 @@ body {
 
   .nav-links {
     a {
-      color: $tertiary-color;
+      color: $primary-color;
     }
 
     input[type="checkbox"] {
@@ -46,7 +49,7 @@ body {
 
 .menu {
   display: flex;
-  gap: 1em;
+  gap: 3em;
   font-size: 18px;
 
   li {
@@ -97,13 +100,12 @@ body {
 .home {
   @include flex-row;
   flex-wrap: wrap;
-  margin: 10vh 0px;
   color: $tertiary-color;
 
   .home-content {
     flex-basis: 30%;
     font-family: cursive;
-    font-size: 3rem;
+    font-size: 2.2rem;
 
     .animation-waviy {
       position: relative;
@@ -134,31 +136,52 @@ body {
         transform: translateY(-20px);
       }
     }
+    .social-button{
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding-top:0.6rem;
+
+        .fa {
+            padding: 15px 20px;
+            font-size: 20px;
+            width: 50px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 5px 10px 18px #888888;
+        }
+          
+          .fa:hover {
+              opacity: 0.7;
+          }
+          
+          .fa-linkedin {
+            background: #007bb5;
+            color: white;
+          }
+          
+          .fa-leetcode {
+            background: #a4c639;
+            color: white;
+          }
+    }
   }
 
   .home-banner {
-    flex-basis: 20%;
-    box-shadow: 10px 5px 10px 5px $tertiary-color;
-    border-radius: 0 30px 30px 0;
-
+    padding-top: 5%;
     img {
-      width: 100%;
-      border-radius: 0 30px 30px 0;
-    }
-
-    &:hover {
-      box-shadow: 10px 5px 10px 5px $secondary-color;
+      height: 60vh;
+      border-radius: 30px;
+      box-shadow: 8px 5px 8px 5px $tertiary-color;
     }
   }
 }
 
 .about {
   @include flex-row;
-  background-image: $gradient;
   flex-direction: column;
   text-align: center;
 
   span {
+    color: $orange;
     font-size: 32px;
     font-weight: 600;
     margin: 15px 0;
@@ -171,49 +194,56 @@ body {
 
     @include flex-row;
     flex-direction: column;
-    background-color: rgb(253, 249, 213);
-    border: 10px solid $orange;
-    border-radius: 20px;
+    background-color: rgb(213, 244, 253);
     padding: 1rem;
+    border-radius: 30px;
+    border: 1px dashed $orange;
+    box-shadow: 2px 2px 8px 2px $tertiary-color;
 
     .genral-info {
-      border: 6px solid $orange;
-      padding: 1rem;
+      @include about-nfo;
+      padding: 1rem 2rem;
       margin-bottom: 2rem;
     }
     .education {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 6px solid $orange;
+      @include flex-row;
       padding: 1rem;
       margin-top: 1rem;
 
       .institute {
+        @include about-nfo;
         padding: 1rem;
-        border: 6px solid $orange;
         margin: 0 5px;
       }
     }
+
     .information {
       font-size: 16px;
       color: rgb(59, 58, 58);
+      text-align: justify;
+      line-height: 28px;
     }
+
     .headers {
       margin: 10px 2px;
+      color: $orange;
+      border-bottom: 2px solid $orange;
+      text-align: left;
     }
   }
 }
 
 .project {
-    @include flex-row;
-    color: $tertiary-color;
+  @include flex-row;
+  color: $tertiary-color;
 
-    span{
-        font-size: 32px;
-        @include flex-row;
-        padding: 0;
-    }
+  span {
+    @include flex-row;
+    color: $orange;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 0;
+  }
 
   .cards {
     width: 100%;
@@ -225,33 +255,35 @@ body {
       margin: 40px;
       position: relative;
       max-width: 250px;
-      max-height: 350px;
-      box-shadow: 0 30px 20px 1px rgb(234, 229, 229);
+      height: 350px;
+      box-shadow: 10px 30px 20px 1px rgb(37, 36, 36);
+
       .card-title {
         display: block;
         text-align: center;
         background-image: $gradient;
+        color: $primary-color;
         padding: 2%;
-        border-top-right-radius: 4px;
-        border-top-left-radius: 4px;
+        border-radius:20px 0  0 ;
       }
 
       .card-desc {
         display: block;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        text-align: justify;
         position: absolute;
         height: 0;
         top: 0;
         opacity: 0;
         padding: 18px 8%;
-        background-image: $gradient;
+        background-color: rgb(213, 244, 253);
         overflow-y: scroll;
         transition: 0.8s ease;
 
-        a{
-            text-decoration: none;
-            color: $primary-color;
-            line-height: 100px;
+        a {
+          text-decoration: none;
+          color: $orange;
+          line-height: 100px;
         }
       }
 
@@ -266,30 +298,38 @@ body {
       object-fit: cover;
       display: block;
       position: relative;
+      border-radius: 0px 0px 30px 0px;
     }
   }
 }
 
-@media (max-width: 1070px){
-    .home{
-        flex-direction: column-reverse;
-        text-align: center;
+@media (max-width: 1070px) {
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
 
-        .home-content{
-            margin-top: 30px;
-        }
-
-        .home-banner{
-            img{
-                width:50%;
-            }
-        }
+    .home-content {
+      margin-top: 30px;
     }
+
+    .home-banner {
+      img {
+        width: 50%;
+        height: 40%;
+      }
+    }
+  }
 }
 
 //Mobile View
 
 @media (max-width: 768px) {
+  .navbar {
+    .logo {
+      font-size: 20px;
+    }
+  }
+
   .menu {
     display: none;
     position: absolute;
@@ -330,8 +370,11 @@ body {
   .home {
     margin: 0;
 
-    #space {
-      display: none;
+    .home-content{
+        font-size: 30px;
+        .animation-waviy{
+            font-size: 30px;
+        }
     }
 
     .home-banner {
@@ -340,10 +383,6 @@ body {
       box-shadow: none;
       &:hover {
         box-shadow: none;
-      }
-
-      img {
-        width: 40%;
       }
     }
   }
