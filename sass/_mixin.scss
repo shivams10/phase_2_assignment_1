@@ -10,3 +10,9 @@
     align-items: center;
     padding: 60px 0;
 }
+@mixin about-nfo{
+    border: 1px solid $orange;
+    border-radius: 20px;
+    background-color: $primary-color;
+    box-shadow: 5px 10px 18px #888888;
+}
