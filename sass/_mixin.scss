@@ -4,15 +4,23 @@
     background: $gradient;
 }
 
-@mixin flex-row{
+@mixin flex-row ($x,$y){
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 60px 0;
+    padding: $x $y;
 }
 @mixin about-nfo{
     border: 1px solid $orange;
     border-radius: 20px;
     background-color: $primary-color;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+@mixin button-style{
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
     box-shadow: 5px 10px 18px #888888;
 }
