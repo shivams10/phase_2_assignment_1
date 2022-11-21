@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shivam Shukla</title>
+    <link rel="stylesheet" href="./sass/main.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">Shivam Shukla</div>
+      <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li class="links">
+            <a>Links</a>
+            <ul class="dropdown">
+              <li><a href="https://github.com/shivams10">Github</a></li>
+              <li><a href="https://leetcode.com/shi_sms/">Leetcode</a></li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/mwlite/in/shivam-shukla-4b870b1b3
+                "
+                  >LinkedIn
+                </a>
+              </li>
+            </ul>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <section class="home" id="home">
+      <div class="home-content">
+        <h2>
+          Hi !
+          <br />
+          I am . . .
+          <br />
+          <div class="animation-waviy">
+            <span style="--i: 1">S</span>
+            <span style="--i: 2">H</span>
+            <span style="--i: 3">I</span>
+            <span style="--i: 4">V</span>
+            <span style="--i: 5">A</span>
+            <span style="--i: 6">M</span>
+            <span style="--i: 8">&#127938;</span>
+          </div>
+        </h2>
+        <br />
+        <div class="social-button">
+          <a
+            href="https://www.linkedin.com/mwlite/in/shivam-shukla-4b870b1b3"
+            class="fa fa-linkedin"
+            >linkedIn</a
+          >
+          <a href="https://leetcode.com/shi_sms/" class="fa fa-leetcode"
+            >LeetCode</a
+          >
+        </div>
+      </div>
+      <div class="home-banner">
+        <img src="./assert/images/shivam.jpeg" alt="Shivam Shukla's Image" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-conatiner">
+        <div class="about-image">
+          <img src="./assert/images/shivam2.jpeg" alt="Shivam Shukla" />
+        </div>
+        <div class="information">
+          <h3>About Me</h3>
+          <h5>Front-end <span>Developer</span></h5>
+          <p>Hi! I am Shivam Shukla.</p>
+          <button>Add a Message</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="project" id="project">
+      <div class="section-title">
+        <span>Projects</span>
+        <div class="cards">
+          
+        </div>
+      </div>
+    </section>
+    <section class="feedback">
+      <header>
+        <h3>Add Your Feedback</h3>
+        <form action="" class="feedback-form">
+          <input type="text" class="feedback-input" placeholder="Your Feedback" />
+          <input type="submit" class="feedback-submit" value="Submit" />
+        </form>
+      </header>
+      <main>
+        <div class="feedback-list">
+          <div id="dynamic-list"></div>
+        </div>
+      </main>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

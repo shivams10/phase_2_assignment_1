@@ -1,0 +1,20 @@
+@import "variables";
+
+@mixin gradient{
+    background: $gradient;
+}
+
+@mixin flex-row ($x,$y){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: $x $y;
+}
+
+@mixin button-style{
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px #888888;
+}
