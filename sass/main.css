@@ -302,6 +302,98 @@ body li {
   border-radius: 0px 0px 30px 0px;
 }
 
+.feedback {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 30px;
+  flex-direction: column;
+  background-color: #53BC9D;
+  border-radius: 30px;
+}
+.feedback header {
+  padding: 2rem 1rem;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+.feedback header h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.feedback header .feedback-form {
+  display: flex;
+}
+.feedback header .feedback-form input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 15px;
+}
+.feedback header .feedback-form .feedback-input {
+  flex: 1 1 0%;
+  background-color: white;
+  border: 1px solid #6a6f20;
+  margin-right: 5px;
+}
+.feedback header .feedback-form .feedback-submit:active {
+  opacity: 0.6;
+}
+.feedback header .feedback-form .feedback-submit {
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px #888888;
+  background-color: #6a6f20;
+}
+.feedback header .feedback-form .feedback-submit:hover {
+  background-color: #8c932c;
+}
+.feedback main {
+  flex: 1 1 0%;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+.feedback main .dynamic-feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.feedback main .dynamic-feedback .feedback-content {
+  flex: 1 1 0%;
+}
+.feedback main .dynamic-feedback .feedback-content .text {
+  width: 100%;
+  padding: 10px 5px;
+  display: block;
+  transition: 0.4s;
+  border-radius: 10px;
+  border: none;
+}
+.feedback main .dynamic-feedback .actions {
+  cursor: pointer;
+}
+.feedback main .dynamic-feedback .actions button {
+  cursor: pointer;
+  padding: 8px 5px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  background-color: #6a6f20;
+  box-shadow: 5px 10px 18px #888888;
+}
+
 @media (max-width: 887px) {
   .home {
     flex-direction: column-reverse;
@@ -397,5 +489,23 @@ body li {
   }
   .project .cards .card .card-desc {
     font-size: 18px;
+  }
+  .feedback header h3 {
+    font-size: 24px;
+  }
+  .feedback header .feedback-form {
+    flex-direction: column;
+  }
+  .feedback header .feedback-form input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  .feedback header .feedback-form .feedback-submit {
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .feedback header .feedback-form .feedback-input {
+    margin: 0;
   }
 }/*# sourceMappingURL=main.css.map */

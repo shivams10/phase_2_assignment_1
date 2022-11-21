@@ -141,7 +141,6 @@ body {
         @include button-style;
         width: 50px;
 
-
         &:hover {
           opacity: 0.8;
         }
@@ -194,7 +193,7 @@ body {
         margin-bottom: 25px;
         text-transform: capitalize;
 
-        span{
+        span {
           color: #6a6f20;
         }
       }
@@ -306,6 +305,101 @@ body {
   }
 }
 
+.feedback {
+  @include flex-row(60px, 30px);
+  flex-direction: column;
+  background-color: $secondary-color;
+  border-radius: 30px;
+
+  header {
+    padding: 2rem 1rem;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      color: $tertiary-color;
+      margin-bottom: 1.5rem;
+    }
+
+    .feedback-form {
+      display: flex;
+
+      input {
+        appearance: none;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 20px;
+        padding: 15px;
+      }
+
+      .feedback-input {
+        flex: 1 1 0%;
+        background-color: $tertiary-color;
+        border: 1px solid $olive;
+        margin-right: 5px;
+      }
+
+      .feedback-submit:active {
+        opacity: 0.6;
+      }
+
+      .feedback-submit {
+        color: $tertiary-color;
+        cursor: pointer;
+        @include button-style;
+        background-color: $olive;
+
+        &:hover {
+          background-color: #8c932c;
+        }
+      }
+    }
+  }
+  main {
+    flex: 1 1 0%;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+
+    .dynamic-feedback {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+
+      .feedback-content {
+        flex: 1 1 0%;
+
+        .text {
+          width: 100%;
+          padding: 10px 5px;
+          display: block;
+          transition: 0.4s;
+          border-radius: 10px;
+          border: none;
+        }
+      }
+      .actions {
+                cursor: pointer;
+
+        button {
+          cursor: pointer;
+          padding: 8px 5px;
+          text-align: center;
+          border-radius: 10px;
+          color: $tertiary-color;
+          background-color: $olive;
+          box-shadow: 5px 10px 18px #888888;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 887px) {
   .home {
     flex-direction: column-reverse;
@@ -313,10 +407,10 @@ body {
 
     .home-content {
       margin-top: 30px;
-      h2{
+      h2 {
         font-size: 28px;
       }
-      .animation-waviy{
+      .animation-waviy {
         font-size: 38px;
       }
     }
@@ -380,11 +474,6 @@ body {
         margin-top: 5px;
         font-size: 30px;
       }
-      // .social-button{
-      //   .fa{
-      //     // padding: 10px;
-      //   }
-      // }
     }
 
     .home-banner {
@@ -395,39 +484,64 @@ body {
     }
   }
 
-  .about{
+  .about {
     margin-top: 10px;
-    .about-conatiner{
+    .about-conatiner {
       flex-direction: column;
       text-align: center;
-  
-      .information{
+
+      .information {
         margin-top: 15px;
-        h3{
+        h3 {
           font-size: 24px;
         }
-        h5{
+        h5 {
           font-size: 18px;
         }
-        // button{
-        //  padding: 15px; 
-        // }
       }
     }
   }
 
-  .project{
-    span{
+  .project {
+    span {
       font-size: 26px;
     }
-    .cards{
-      .card{
-        .card-title{
+    .cards {
+      .card {
+        .card-title {
           font-size: 20px;
         }
 
-        .card-desc{
+        .card-desc {
           font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .feedback{
+    header{
+
+      h3{
+        font-size: 24px;
+      }
+
+      .feedback-form{
+        flex-direction: column;
+
+        input{
+          padding: 5px;
+          font-size: 16px;
+        }
+
+        .feedback-submit{
+          padding: 5px;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+
+        .feedback-input{
+          margin: 0;
         }
       }
     }
