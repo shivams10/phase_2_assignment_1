@@ -521,20 +521,23 @@ body {
 
   .feedback{
     header{
-
+        text-align: center;
       h3{
         font-size: 24px;
       }
 
       .feedback-form{
         flex-direction: column;
+        align-items: center;
 
         input{
+          width: 100%;
           padding: 5px;
           font-size: 16px;
         }
 
         .feedback-submit{
+          max-width:40% ;
           padding: 5px;
           font-size: 16px;
           margin-top: 10px;
@@ -542,6 +545,15 @@ body {
 
         .feedback-input{
           margin: 0;
+        }
+      }
+    }
+    main{
+      .dynamic-feedback{
+        .feedback-content{
+          .text{
+            padding: 5px;
+          }
         }
       }
     }

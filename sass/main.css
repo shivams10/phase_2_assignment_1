@@ -490,22 +490,31 @@ body li {
   .project .cards .card .card-desc {
     font-size: 18px;
   }
+  .feedback header {
+    text-align: center;
+  }
   .feedback header h3 {
     font-size: 24px;
   }
   .feedback header .feedback-form {
     flex-direction: column;
+    align-items: center;
   }
   .feedback header .feedback-form input {
+    width: 100%;
     padding: 5px;
     font-size: 16px;
   }
   .feedback header .feedback-form .feedback-submit {
+    max-width: 40%;
     padding: 5px;
     font-size: 16px;
     margin-top: 10px;
   }
   .feedback header .feedback-form .feedback-input {
     margin: 0;
+  }
+  .feedback main .dynamic-feedback .feedback-content .text {
+    padding: 5px;
   }
 }/*# sourceMappingURL=main.css.map */

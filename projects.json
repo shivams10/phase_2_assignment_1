@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Housing Society",
+    "description": "Housing Society is a web platform where a user can book resources from a society such as hall, garden, etc.<br />It is made wih React js Node js and MySQL.<br>",
+    "githubLink": "https://github.com/shivams10/housing-society-frontend",
+    "imageLink": "./assert/images//society.webp"
+  },
+  {
+    "title": "Cryptos",
+    "description": "Cryptos is a web platform where a user can see the current price and the last 24hr rate change in crypto value.<br />It is made using React js and api from coingecko.<br />",
+    "githubLink": "https://github.com/shivam910/cryptos",
+    "imageLink": "./assert//images/cryptos.webp"
+  },
+  {
+    "title": "Expense Tracker",
+    "description": " Expense Tracker is a web patform where user can monitor their day to day expenses and can keep record of it. <br/> It is made with React JS. <br />",
+    "githubLink": "https://github.com/shivam910/expense-tracker",
+    "imageLink": "./assert//images/expense.jpeg"
+  }
+]
